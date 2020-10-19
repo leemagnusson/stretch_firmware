@@ -662,7 +662,7 @@ int readEncoder()           ////////////////////////////////////////////////////
   CHIPSELECT_LOW(); //digitalWrite(chipSelectPin, LOW);
 
   byte b1 = SPI.transfer(0xFF);
-  byte b2 = SPI.transfer(0xFF);
+  byte b2 = SPI.transfer(0xFE);
 
   angleTemp = (((b1 << 8) | b2) & 0B0011111111111111);
 
